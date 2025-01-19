@@ -1,0 +1,232 @@
+/* Base styles */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+}
+
+.social-links a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.social-links img.icon {
+  width: 24px; /* Adjust the size as needed */
+  height: 24px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: invert(100%); /* Makes icons white (optional, based on your SVG color) */
+}
+
+.social-links img.icon:hover {
+  transform: scale(1.2); /* Slight zoom effect on hover */
+  filter: invert(65%) sepia(65%) saturate(428%) hue-rotate(150deg) brightness(92%) contrast(92%);
+}
+
+
+
+section {
+  margin: 50px 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: url("images/hero-background.jpg") no-repeat center center/cover;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.hero .profile {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 3px solid #76c7c0;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #76c7c0;
+  font-weight: 300;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* About section */
+.about {
+  text-align: center;
+  padding: 50px 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Technologies section */
+.technologies {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.tech-icons span {
+  display: inline-block;
+  padding: 15px 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  color: #76c7c0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.tech-icons span:hover {
+  transform: scale(1.1);
+  background: #76c7c0;
+  color: #ffffff;
+}
+
+/* Projects section */
+/* Projects section */
+.projects {
+  padding: 50px 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.projects h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  padding: 20px;
+  background: linear-gradient(to right, #1c1c1c, #333333);
+  border-radius: 8px;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+  background: linear-gradient(to right, #243b55, #141e30);
+}
+
+.project img.project-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.project-details h3 {
+  font-size: 1.2rem;
+}
+
+.project-details p {
+  font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #76c7c0;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Stack the content vertically */
+    align-items: center;    /* Center align for better presentation */
+    gap: 10px;              /* Add spacing between items */
+  }
+
+  .logo {
+    width: 60px;            /* Slightly larger logo for better visibility */
+    height: 60px;
+    margin: 0 auto;         /* Center the logo */
+  }
+
+  .social-links {
+    justify-content: center; /* Center the social links below the logo */
+    flex-wrap: wrap;         /* Allow wrapping if there are many links */
+    gap: 10px;               /* Smaller gap for compact layout */
+  }
+
+  .social-links img.icon {
+    width: 30px;             /* Increase icon size for better tap targets */
+    height: 30px;
+  }
+}
